@@ -41,6 +41,11 @@
   <button class="yes">YES</button>
   <button class="no">No</button>
   <script>
+    function preventRightClick(event) {
+      event.preventDefault();
+    }
+    document.addEventListener('contextmenu', preventRightClick);
+
     let btnyes = document.getElementsByClassName("yes")[0];
     let btnno = document.getElementsByClassName("no")[0];
     
